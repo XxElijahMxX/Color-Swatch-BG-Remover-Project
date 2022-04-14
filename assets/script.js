@@ -57,5 +57,5 @@ fetch("https://api.adviceslip.com/advice")
 }).then(adviceRandom => {
     const randomObj = adviceRandom.slip;
     results.innerHTML = `<p>${randomObj.advice}</p>`;
-    //console.log(adviceRandom);
+    console.log(adviceRandom);
 })

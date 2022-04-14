@@ -79,3 +79,6 @@ footer h2 {
 
 
 
+.container {
+    display: table-footer-group;
+}
