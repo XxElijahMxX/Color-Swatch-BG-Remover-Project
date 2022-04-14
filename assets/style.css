@@ -12,13 +12,14 @@ h1 {
     padding: 20px 35px;
     font-size: 21px;
     font-weight: bold;
+    margin: -10px;
 
 }
 
 .wrapper{
     background-image: url("images/black-box.jpeg");
     width: 700px;
-    margin: auto;
+    margin: 100 auto;
     border-radius: 7px;    
 }
 
@@ -48,21 +49,32 @@ h1 {
     color:#ccc;
 }
 
-.weather-part .bottom-details {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid #ccc;
+.bottom-details .column {
+    display: inline-block;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    font-size: 40px;
+    text-align: center;
+}
+
+.temp {
+    font-size: 40px;
+    text-align: center;
 }
 
 
-
-footer{
+footer h2 {
     text-align: left;
     background-color: white;
     color: rgb(62, 62, 240);
     padding: 20px 35px;
     font-size: 21px;
+    margin: -10px;
 }
 
 
