@@ -47,15 +47,13 @@ function displayWeather (response) {
     }
 }
 
-const options = {
-	method: 'POST',
-	headers: {
-		'X-RapidAPI-Host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
-		'X-RapidAPI-Key': '8103907254mshd54dafee3143633p1ec4e7jsnb927eb9caaad'
-	}
-};
 
-fetch('https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius&day=today', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+const result = document.querySelector("#result");
+const adviceBtn = document.querySelector("#getRandom");
+
+
+fetch("https://api.adviceslip.com/advice").then(response => {
+    return console.log(response.json());
+}).then(adviceRandom => {
+    console.log(adviceRandom);
+})
