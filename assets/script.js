@@ -47,13 +47,15 @@ function displayWeather (response) {
     }
 }
 
-
-const result = document.querySelector("#result");
+// defining these variables attached to coresponding ids
+const results = document.querySelector("#result");
 const adviceBtn = document.querySelector("#getRandom");
-
-
-fetch("https://api.adviceslip.com/advice").then(response => {
-    return console.log(response.json());
+//fetch request to url that then returns a response with an object then inserting the object on the page
+fetch("https://api.adviceslip.com/advice")
+.then(response => {
+    return response.json();
 }).then(adviceRandom => {
-    console.log(adviceRandom);
+    const randomObj = adviceRandom.slip;
+    results.innerHTML = `<p>${randomObj.advice}</p>`;
+    //console.log(adviceRandom);
 })
