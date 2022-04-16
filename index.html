@@ -11,14 +11,14 @@
 <body>
     
     
-    <h1>Weather Pollen Forecast</h1>
+    <h1>Weather Forecast and Advice</h1>
     <form action="" onsubmit=" false">
  <div class="wrapper">
      <header><i data-feather="arrow-left"></i>Weather</header>
      <section class="input-part">
         <p class="text-info"></p>
         <input type="text" class="search" placeholder="Enter City Name" spellcheck="false">
-        <button type="submit" class="btn">Submit</button>
+        <button class="btn">Submit</button>
         <p class="error"></p>
         <div class="separator"></div>
      </form>
@@ -36,19 +36,16 @@
     </div>
 <div class="bottom-details">
     <div class="column">
-    <i data-feather="thermometer"></i> 
-        <div class="details">
-            <div class="feels-like">Feels Like<span>°</span>C
-            <span class="number-2"></span> 
+            <div class="feels-like">Feels Like<span>°</span>C 
+                <i data-feather="thermometer"></i> 
             </div>
             
         </div>
     </div>
-    <div class="column pollen">
-        <div class="details">
-        <span></span>
-        <p>POLLEN</p>
-        </div>
+    <div class="container">
+        <div id="result"></div>
+        <button class="btn2" id="getRandom">Get Random Advice</button>
+    </div>
     </div>
 </div>
 </section>
