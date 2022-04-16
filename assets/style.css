@@ -49,6 +49,9 @@ h1 {
     color:#ccc;
 }
 
+.column {
+    justify-content: space-between;
+}
 .bottom-details .column {
     display: inline-block;
     margin: auto;
