@@ -16,11 +16,17 @@ h1 {
 
 }
 
+
+
 .wrapper{
     background-image: url("images/black-box.jpeg");
     width: 700px;
     margin: 100 auto;
-    border-radius: 7px;    
+    border-radius: 7px; 
+  }
+
+.btn {
+    display: none;
 }
 
 .wrapper header {
@@ -32,7 +38,21 @@ h1 {
     align-items: center;
     border-bottom: 1px solid #ccc;
 }
-
+header i{
+    font-size: 0em;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+.wrapper.active header i{
+    margin-left: 5px;
+    font-size: 30px;
+  }
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+  }
+.wrapper.active .input-part{
+    display: none;
+  }
 .input-part input {
     text-align: center;
     padding: 0 15px;
@@ -48,26 +68,26 @@ h1 {
     border-radius: 27px;
     color:#ccc;
 }
-
-.column {
-    justify-content: space-between;
-}
-.bottom-details .column {
-    display: inline-block;
-    margin: auto;
-    padding: 15px 0;
+  
+.wrapper .weather-part{
+    display: none;
+    margin: 30px 0 0;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+  }
+
+.error {
+    text-align: center;
 }
 
-.location {
+.location , .temp {
     font-size: 40px;
     text-align: center;
 }
 
-.temp {
-    font-size: 40px;
-    text-align: center;
+.map-pin {
+    position: relative;
 }
 
 

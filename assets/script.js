@@ -23,30 +23,31 @@ function getData() {
         return response.json();
     }).then(displayWeather);    
 }
-// this function displays the information on the page and writes it as HTML elements
+
 function displayWeather (response) {
     console.log(response);
-    // the returns an invalid city response if user inputs a non city search
     if (response.cod === "404") {
         const error = document.querySelector(".error");
         error.textContent = "This is not a valid city";
         search.value = "";
     } else {
-        // this defines a city variable and writes the city and country on the page
         const city = document.querySelector(".city");
         city.innerText = `${response.name}, ${response.sys.country}`;
 
-        // this defines the temperature variable and writes the fetched parameer for the temp on the page in celsius
         const temp = document.querySelector(".temp");
         temp.innerHTML = `Temp: ${Math.round(response.main.temp)} <span>°</span>C`;
 
-        // this defines the feel like variable and writes the parameter for feels like to the page in celsius
         const feelsLike =document.querySelector(".feels-like");
         feelsLike.innerHTML = ` Feels Like: ${Math.round(response.main.feels_like)}<span>°</span>C`;
         
+        const e = document.querySelector(".error");
+
+        // remove error message
+        e.parentElement.removeChild(e);
+        
+        
     }
 }
-
 // defining these variables attached to coresponding ids
 const results = document.querySelector("#result");
 const adviceBtn = document.querySelector("#getRandom");
@@ -59,3 +60,16 @@ fetch("https://api.adviceslip.com/advice")
     results.innerHTML = `<p>${randomObj.advice}</p>`;
     console.log(adviceRandom);
 })
+
+ //passing a particular weather info to a particular element
+// weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+ //weatherPart.querySelector(".weather").innerText = description;
+ //weatherPart.querySelector(".location span").innerText = `${city}, ${country}`;
+ //weatherPart.querySelector(".temp .numb-2").innerText = Math.floor(feels_like);
+ //weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
+ //infoTxt.classList.remove("pending", "error");
+ //infoTxt.innerText = "";
+ //inputField.value = "";
+// wrapper.classList.add("active");
+
+
